@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Research and project work by Chuanbo (Pilgrim) Peng."
+    />
+    <title>Work | Chuanbo (Pilgrim) Peng</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="work">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Chuanbo Peng home"><span>CP</span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="work.html" data-nav="work">Research & Projects</a>
+        <a href="notes.html" data-nav="notes">Learning Notes</a>
+        <a href="hobbies.html" data-nav="hobbies">Hobbies</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="page-hero work-hero">
+        <div class="page-hero-copy reveal">
+          <p class="eyebrow">Research & Projects / 研究与项目</p>
+          <h1>Questions first. Projects as evidence.</h1>
+          <p>
+            This page is not trying to pretend every thread is a finished result. It is a map of
+            the questions I am learning to ask, and the projects that give those questions weight.
+          </p>
+          <p class="zh">
+            这个页面不把每条线都包装成已经完成的成果，而是展示我正在形成的问题意识，以及支撑这些问题的项目证据。
+          </p>
+        </div>
+        <div class="page-hero-mark research-panel reveal" aria-hidden="true">
+          <div>
+            <span class="panel-label">Logged feedback</span>
+            <strong>biased / sparse / sequential</strong>
+          </div>
+          <div>
+            <span class="panel-label">Evaluation lens</span>
+            <strong>IPS + confidence + ESS</strong>
+          </div>
+          <div>
+            <span class="panel-label">Decision layer</span>
+            <strong>bandits -> LLM policies</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section question-lab" aria-label="Research questions">
+        <div class="section-kicker">Research direction / 问题意识</div>
+        <article class="question-card reveal">
+          <span>01</span>
+          <h2>Can offline evidence replace online regret?</h2>
+          <p>
+            IPS and confidence intervals are useful, but the hard question is when logged feedback
+            stops being enough to rank sequential decision policies.
+          </p>
+          <p class="zh">IPS 和置信区间有用，但真正的问题是：什么时候离线反馈不足以可靠排序序列决策策略？</p>
+        </article>
+        <article class="question-card reveal">
+          <span>02</span>
+          <h2>Do LLMs explore, or do we just shrink their action space?</h2>
+          <p>
+            My current SUSTech preparation is circling this distinction: genuine exploration vs a
+            pipeline that makes the choice easier by generating candidates first.
+          </p>
+          <p class="zh">我现在的暑研准备正在区分：LLM 真的在探索，还是候选生成先把动作空间变小了？</p>
+        </article>
+        <article class="question-card reveal">
+          <span>03</span>
+          <h2>How do we make experiments trustworthy when systems are adaptive?</h2>
+          <p>
+            This is where statistics, numerical reliability, and evaluation protocols meet: not
+            only asking whether a model works, but whether the measurement is believable.
+          </p>
+          <p class="zh">这里连接统计、数值可靠性与评价协议：不只是模型是否有效，而是测量本身是否可信。</p>
+        </article>
+      </section>
+
+      <section class="section work-list">
+        <article class="work-card reveal" id="offline-evaluation">
+          <div class="work-meta">
+            <span>Guided research project</span>
+            <span>Jul 2025 - Sep 2025</span>
+          </div>
+          <h2>Offline Evaluation of Sequential Decision Algorithms</h2>
+          <p>
+            I investigated whether inverse propensity scoring can serve as a reliable offline
+            substitute for cumulative regret when evaluating multi-armed bandit algorithms. The
+            project compared Explore-Then-Commit, UCB, and Thompson Sampling on Yelp and MovieLens
+            datasets, using confidence intervals, ranking consistency, and effective sample size
+            diagnostics.
+          </p>
+          <p class="zh">
+            我研究了 IPS 是否能在离线环境中替代 cumulative regret 来评价 multi-armed bandit
+            算法。项目比较了 Explore-Then-Commit、UCB 和 Thompson Sampling 在 Yelp 与 MovieLens
+            数据集上的表现，并使用置信区间、排名一致性和有效样本量作为可靠性诊断。
+          </p>
+          <div class="tag-row">
+            <span>Bandits</span>
+            <span>IPS</span>
+            <span>Cumulative regret</span>
+            <span>ESS</span>
+            <span>Yelp / MovieLens</span>
+          </div>
+        </article>
+
+        <article class="work-card reveal" id="llm-exploration">
+          <div class="work-meta">
+            <span>SUSTech preparation</span>
+            <span>Current</span>
+          </div>
+          <h2>LLM Exploration / Exploitation and In-Context RL</h2>
+          <p>
+            I am preparing a summer research project on LLMs as in-context bandit or reinforcement
+            learners, with attention to exploration, exploitation, action-space reduction, offline
+            data bias, and evaluation protocols.
+          </p>
+          <p class="zh">
+            我正在准备南科大暑期研究，方向与 LLM 作为 in-context bandit 或 reinforcement
+            learner 有关，重点关注 exploration、exploitation、动作空间缩减、离线数据偏差和评价协议。
+          </p>
+          <p class="quote-line">
+            Does decomposing LLM decision-making into candidate generation and final selection
+            genuinely improve performance, or does it mainly make the task easier by reducing the
+            action space?
+          </p>
+          <div class="tag-row">
+            <span>LLM decision-making</span>
+            <span>Exploration</span>
+            <span>In-context RL</span>
+            <span>Evaluation protocols</span>
+          </div>
+        </article>
+
+        <article class="work-card reveal" id="hydropeaking">
+          <div class="work-meta">
+            <span>Research Assistant</span>
+            <span>Jun 2024 - Sep 2024</span>
+          </div>
+          <h2>Hydropeaking Analysis / Daily Hydropeaking Index</h2>
+          <p>
+            I built algorithms to compute the Daily Hydropeaking Index, processed national
+            hydrological datasets from 2021 to 2023, and explored statistical and machine learning
+            approaches for modelling hydropeaking behaviour.
+          </p>
+          <p class="zh">
+            我参与水文数据与 DHI 分析，构建 Daily Hydropeaking Index 的计算流程，处理 2021 至
+            2023 年全国水文数据，并尝试使用统计与机器学习方法建模 hydropeaking 行为。
+          </p>
+          <div class="tag-row">
+            <span>Hydrological data</span>
+            <span>Time series</span>
+            <span>Data processing</span>
+            <span>Regression / LSTM</span>
+          </div>
+        </article>
+
+        <article class="work-card reveal" id="thermostat">
+          <div class="work-meta">
+            <span>Mathematical modelling</span>
+            <span>Ongoing</span>
+          </div>
+          <h2>2D Thermostat-Heater Control System</h2>
+          <p>
+            This project studies a two-dimensional heat diffusion model with Newton/Robin boundary
+            conditions and localized heating. I use numerical simulation, bang-bang or
+            hysteresis-style control, and optimization over thermostat placement to study
+            temperature regulation.
+          </p>
+          <p class="zh">
+            这个项目研究二维热扩散模型、Newton/Robin 边界条件和局部加热控制。我使用数值模拟、
+            bang-bang 或 hysteresis 风格的控制策略，并通过优化 thermostat 位置来分析温度调节效果。
+          </p>
+          <div class="tag-row">
+            <span>PDE modelling</span>
+            <span>Numerical methods</span>
+            <span>Control</span>
+            <span>Optimization</span>
+          </div>
+        </article>
+
+        <article class="work-card reveal" id="modelling">
+          <div class="work-meta">
+            <span>Competitions</span>
+            <span>Team lead</span>
+          </div>
+          <h2>Mathematical Modeling Competitions</h2>
+          <p>
+            I led teams in mathematical modelling competitions, including work on tennis momentum
+            prediction and e-commerce demand forecasting. These projects strengthened my workflow
+            for problem decomposition, data processing, model selection, visualization, and
+            technical writing.
+          </p>
+          <p class="zh">
+            我曾作为队长参加数学建模竞赛，包括网球比赛 momentum 预测和电商需求预测等题目。
+            这些经历训练了我从问题拆解、数据处理、模型选择、可视化到技术写作的完整流程。
+          </p>
+          <div class="tag-row">
+            <span>Forecasting</span>
+            <span>Classification</span>
+            <span>Optimization</span>
+            <span>Report writing</span>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Chuanbo (Pilgrim) Peng / 彭川博</p>
+      <div>
+        <a href="mailto:cpeng37@jh.edu">cpeng37@jh.edu</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
