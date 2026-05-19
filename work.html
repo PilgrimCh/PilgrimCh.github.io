@@ -29,14 +29,11 @@
     <main id="main">
       <section class="page-hero work-hero">
         <div class="page-hero-copy reveal">
-          <p class="eyebrow">Research & Projects / 研究与项目</p>
+          <p class="eyebrow">Research & Projects</p>
           <h1>Questions first. Projects as evidence.</h1>
           <p>
             This page is not trying to pretend every thread is a finished result. It is a map of
             the questions I am learning to ask, and the projects that give those questions weight.
-          </p>
-          <p class="zh">
-            这个页面不把每条线都包装成已经完成的成果，而是展示我正在形成的问题意识，以及支撑这些问题的项目证据。
           </p>
         </div>
         <div class="page-hero-mark research-panel reveal" aria-hidden="true">
@@ -56,7 +53,7 @@
       </section>
 
       <section class="section question-lab" aria-label="Research questions">
-        <div class="section-kicker">Research direction / 问题意识</div>
+        <div class="section-kicker">Research direction</div>
         <article class="question-card reveal">
           <span>01</span>
           <h2>When does offline evidence fail to rank bandit policies?</h2>
@@ -64,7 +61,6 @@
             IPS and confidence intervals can be useful diagnostics, but I now treat this more as
             an exploratory question than a settled result.
           </p>
-          <p class="zh">IPS 和置信区间可以作为诊断工具，但我现在更愿意把这看作一个探索性问题，而不是定论。</p>
         </article>
         <article class="question-card reveal">
           <span>02</span>
@@ -73,7 +69,6 @@
             My current SUSTech preparation is circling this distinction: genuine exploration vs a
             pipeline that makes the choice easier by generating candidates first.
           </p>
-          <p class="zh">我现在的暑研准备正在区分：LLM 真的在探索，还是候选生成先把动作空间变小了？</p>
         </article>
         <article class="question-card reveal">
           <span>03</span>
@@ -82,7 +77,6 @@
             This is where statistics, numerical reliability, and evaluation protocols meet: not
             only asking whether a model works, but whether the measurement is believable.
           </p>
-          <p class="zh">这里连接统计、数值可靠性与评价协议：不只是模型是否有效，而是测量本身是否可信。</p>
         </article>
       </section>
 
@@ -100,12 +94,6 @@
             MovieLens-style logs, using confidence intervals, ranking consistency, and effective
             sample size diagnostics. I would present it as useful training in offline evaluation
             rather than as a strong research claim.
-          </p>
-          <p class="zh">
-            这个项目更适合作为一次 exploratory 的训练：我尝试检验 IPS 在多大程度上可以作为
-            cumulative regret 的离线 proxy，用来评价 bandit 算法。项目比较了
-            Explore-Then-Commit、UCB 和 Thompson Sampling 在 Yelp 与 MovieLens 风格日志上的表现，
-            并使用置信区间、排名一致性和有效样本量做可靠性诊断。我不会把它包装成很强的研究结论。
           </p>
           <div class="tag-row">
             <span>Bandits</span>
@@ -126,10 +114,6 @@
             I am preparing a summer research project on LLMs as in-context bandit or reinforcement
             learners, with attention to exploration, exploitation, action-space reduction, offline
             data bias, and evaluation protocols.
-          </p>
-          <p class="zh">
-            我正在准备南科大暑期研究，方向与 LLM 作为 in-context bandit 或 reinforcement
-            learner 有关，重点关注 exploration、exploitation、动作空间缩减、离线数据偏差和评价协议。
           </p>
           <p class="quote-line">
             Does decomposing LLM decision-making into candidate generation and final selection
@@ -155,10 +139,6 @@
             hydrological datasets from 2021 to 2023, and explored statistical and machine learning
             approaches for modelling hydropeaking behaviour.
           </p>
-          <p class="zh">
-            我参与水文数据与 DHI 分析，构建 Daily Hydropeaking Index 的计算流程，处理 2021 至
-            2023 年全国水文数据，并尝试使用统计与机器学习方法建模 hydropeaking 行为。
-          </p>
           <div class="tag-row">
             <span>Hydrological data</span>
             <span>Time series</span>
@@ -180,12 +160,6 @@
             Newton cooling, heat-equation simulations, bang-bang and hysteresis control, and
             optimization of thermostat placement.
           </p>
-          <p class="zh">
-            这一条 applied math 线索来自两个 MGP 建模任务：一个把 pirate ship / frisbee ride
-            建成摆类系统，用 acceleration、jerk 和 height 构造 excitement function，并在安全约束下
-            比较 motion design；另一个研究室内加热控制，从 Newton cooling 到一维 / 二维 heat
-            equation、bang-bang / hysteresis control 和 thermostat 位置优化。
-          </p>
           <div class="tag-row">
             <span>ODE/PDE modelling</span>
             <span>Numerical methods</span>
@@ -206,10 +180,6 @@
             for problem decomposition, data processing, model selection, visualization, and
             technical writing.
           </p>
-          <p class="zh">
-            我曾作为队长参加数学建模竞赛，包括网球比赛 momentum 预测和电商需求预测等题目。
-            这些经历训练了我从问题拆解、数据处理、模型选择、可视化到技术写作的完整流程。
-          </p>
           <div class="tag-row">
             <span>Forecasting</span>
             <span>Classification</span>
@@ -221,12 +191,26 @@
     </main>
 
     <footer class="site-footer">
-      <p>Chuanbo (Pilgrim) Peng / 彭川博</p>
+      <p>Chuanbo (Pilgrim) Peng</p>
       <div>
         <a href="mailto:cpeng37@jh.edu">cpeng37@jh.edu</a>
         <a href="contact.html">Contact</a>
       </div>
     </footer>
+
+    <div
+      class="visitor-tracker"
+      aria-hidden="true"
+      style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; clip-path: inset(50%);"
+    >
+      <img
+        src="https://mapmyvisitors.com/map.png?d=0L1V6UCyFnitObp8Ny8uoifdr1GIHXOvH-sxGOtzbXs&cl=ffffff"
+        alt=""
+        width="1"
+        height="1"
+        style="width: 1px; height: 1px; max-width: 1px;"
+      />
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
