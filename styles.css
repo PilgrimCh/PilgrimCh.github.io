@@ -381,12 +381,13 @@ button:focus-visible {
 
 .intro-grid {
   display: grid;
-  grid-template-columns: minmax(260px, 320px) minmax(0, 760px);
+  grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
-    "intro-kicker intro-copy"
-    "intro-topics intro-copy";
-  justify-content: center;
-  gap: 18px 56px;
+    "intro-kicker"
+    "intro-copy"
+    "intro-topics";
+  gap: 18px;
+  width: min(1040px, calc(100% - 40px));
   padding-top: 54px;
   padding-bottom: 48px;
   border-bottom: 1px solid var(--line);
@@ -492,6 +493,7 @@ button:focus-visible {
 }
 
 .intro-copy p {
+  max-width: 960px;
   hyphens: auto;
   text-align: justify;
   text-justify: inter-word;
@@ -512,9 +514,9 @@ button:focus-visible {
 .intro-topics {
   grid-area: intro-topics;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin-top: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 8px;
 }
 
 .intro-topics a {
@@ -1201,25 +1203,6 @@ button:focus-visible {
 .site-footer a {
   font-weight: 800;
   color: var(--ink);
-}
-
-.visitor-tracker {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  opacity: 0;
-  pointer-events: none;
-  clip-path: inset(50%);
-}
-
-.visitor-tracker img,
-.visitor-tracker iframe,
-.visitor-tracker canvas,
-.visitor-tracker object {
-  width: 1px !important;
-  height: 1px !important;
-  max-width: 1px !important;
 }
 
 .reveal {

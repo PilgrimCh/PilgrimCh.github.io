@@ -55,3 +55,11 @@ if ("IntersectionObserver" in window) {
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
+
+(() => {
+  const trackerUrl =
+    "https://mapmyvisitors.com/map.png?d=0L1V6UCyFnitObp8Ny8uoifdr1GIHXOvH-sxGOtzbXs&cl=ffffff";
+  const separator = trackerUrl.includes("?") ? "&" : "?";
+  window.__mapMyVisitorsPing = document.createElement("img");
+  window.__mapMyVisitorsPing.src = `${trackerUrl}${separator}t=${Date.now()}`;
+})();
