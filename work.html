@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body data-page="work">
-    <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Chuanbo Peng home"><span>CP</span></a>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
@@ -22,7 +21,7 @@
         <a href="index.html" data-nav="home">Home</a>
         <a href="work.html" data-nav="work">Research & Projects</a>
         <a href="notes.html" data-nav="notes">Learning Notes</a>
-        <a href="hobbies.html" data-nav="hobbies">Hobbies</a>
+        <a href="hobbies.html" data-nav="hobbies">Beyond the CV</a>
         <a href="contact.html" data-nav="contact">Contact</a>
       </nav>
     </header>
@@ -60,12 +59,12 @@
         <div class="section-kicker">Research direction / 问题意识</div>
         <article class="question-card reveal">
           <span>01</span>
-          <h2>Can offline evidence replace online regret?</h2>
+          <h2>When does offline evidence fail to rank bandit policies?</h2>
           <p>
-            IPS and confidence intervals are useful, but the hard question is when logged feedback
-            stops being enough to rank sequential decision policies.
+            IPS and confidence intervals can be useful diagnostics, but I now treat this more as
+            an exploratory question than a settled result.
           </p>
-          <p class="zh">IPS 和置信区间有用，但真正的问题是：什么时候离线反馈不足以可靠排序序列决策策略？</p>
+          <p class="zh">IPS 和置信区间可以作为诊断工具，但我现在更愿意把这看作一个探索性问题，而不是定论。</p>
         </article>
         <article class="question-card reveal">
           <span>02</span>
@@ -90,21 +89,23 @@
       <section class="section work-list">
         <article class="work-card reveal" id="offline-evaluation">
           <div class="work-meta">
-            <span>Guided research project</span>
+            <span>Guided research-style project</span>
             <span>Jul 2025 - Sep 2025</span>
           </div>
-          <h2>Offline Evaluation of Sequential Decision Algorithms</h2>
+          <h2>IPS vs Regret in Offline Bandit Evaluation</h2>
           <p>
-            I investigated whether inverse propensity scoring can serve as a reliable offline
-            substitute for cumulative regret when evaluating multi-armed bandit algorithms. The
-            project compared Explore-Then-Commit, UCB, and Thompson Sampling on Yelp and MovieLens
-            datasets, using confidence intervals, ranking consistency, and effective sample size
-            diagnostics.
+            I used this project to test a cautious question: how far inverse propensity scoring
+            can go as an offline proxy for cumulative regret when evaluating bandit algorithms.
+            The work compared Explore-Then-Commit, UCB, and Thompson Sampling on Yelp and
+            MovieLens-style logs, using confidence intervals, ranking consistency, and effective
+            sample size diagnostics. I would present it as useful training in offline evaluation
+            rather than as a strong research claim.
           </p>
           <p class="zh">
-            我研究了 IPS 是否能在离线环境中替代 cumulative regret 来评价 multi-armed bandit
-            算法。项目比较了 Explore-Then-Commit、UCB 和 Thompson Sampling 在 Yelp 与 MovieLens
-            数据集上的表现，并使用置信区间、排名一致性和有效样本量作为可靠性诊断。
+            这个项目更适合作为一次 exploratory 的训练：我尝试检验 IPS 在多大程度上可以作为
+            cumulative regret 的离线 proxy，用来评价 bandit 算法。项目比较了
+            Explore-Then-Commit、UCB 和 Thompson Sampling 在 Yelp 与 MovieLens 风格日志上的表现，
+            并使用置信区间、排名一致性和有效样本量做可靠性诊断。我不会把它包装成很强的研究结论。
           </p>
           <div class="tag-row">
             <span>Bandits</span>
@@ -168,22 +169,25 @@
 
         <article class="work-card reveal" id="thermostat">
           <div class="work-meta">
-            <span>Mathematical modelling</span>
-            <span>Ongoing</span>
+            <span>Applied mathematics</span>
+            <span>MGP modelling</span>
           </div>
-          <h2>2D Thermostat-Heater Control System</h2>
+          <h2>Applied Math Modelling: Pendulum Rides and Thermostat Control</h2>
           <p>
-            This project studies a two-dimensional heat diffusion model with Newton/Robin boundary
-            conditions and localized heating. I use numerical simulation, bang-bang or
-            hysteresis-style control, and optimization over thermostat placement to study
-            temperature regulation.
+            Two MGP modelling tasks sit behind this applied-math thread. In one, we modelled
+            pendulum-type amusement rides, defining an excitement function from acceleration,
+            jerk, and height under safety constraints. In another, we studied room heating with
+            Newton cooling, heat-equation simulations, bang-bang and hysteresis control, and
+            optimization of thermostat placement.
           </p>
           <p class="zh">
-            这个项目研究二维热扩散模型、Newton/Robin 边界条件和局部加热控制。我使用数值模拟、
-            bang-bang 或 hysteresis 风格的控制策略，并通过优化 thermostat 位置来分析温度调节效果。
+            这一条 applied math 线索来自两个 MGP 建模任务：一个把 pirate ship / frisbee ride
+            建成摆类系统，用 acceleration、jerk 和 height 构造 excitement function，并在安全约束下
+            比较 motion design；另一个研究室内加热控制，从 Newton cooling 到一维 / 二维 heat
+            equation、bang-bang / hysteresis control 和 thermostat 位置优化。
           </p>
           <div class="tag-row">
-            <span>PDE modelling</span>
+            <span>ODE/PDE modelling</span>
             <span>Numerical methods</span>
             <span>Control</span>
             <span>Optimization</span>

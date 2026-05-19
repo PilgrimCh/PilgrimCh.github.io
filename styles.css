@@ -58,21 +58,6 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
-.skip-link {
-  position: fixed;
-  top: 12px;
-  left: 12px;
-  z-index: 100;
-  padding: 10px 14px;
-  color: var(--paper-strong);
-  background: var(--ink);
-  transform: translateY(-140%);
-}
-
-.skip-link:focus {
-  transform: translateY(0);
-}
-
 .site-header {
   position: fixed;
   top: 0;
@@ -110,11 +95,29 @@ button:focus-visible {
 .site-nav a {
   min-height: 44px;
   padding: 11px 12px;
-  border-bottom: 2px solid transparent;
+  border: 1px solid transparent;
+  border-bottom-width: 2px;
+  border-radius: 8px;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease;
 }
 
 .site-nav a.is-active {
-  border-color: currentColor;
+  border-bottom-color: currentColor;
+}
+
+.site-nav a:hover {
+  transform: translateY(-2px);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.site-nav a.is-active:hover {
+  border-color: var(--accent);
 }
 
 .nav-toggle {
@@ -142,12 +145,12 @@ button:focus-visible {
 
 .home-hero {
   position: relative;
-  min-height: min(860px, calc(100svh - 20px));
+  min-height: min(720px, calc(100svh - 120px));
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
   gap: clamp(28px, 5vw, 76px);
   align-items: center;
-  padding: 106px max(28px, calc((100vw - 1180px) / 2)) 44px;
+  padding: 96px max(28px, calc((100vw - 1180px) / 2)) 28px;
   overflow: hidden;
   color: var(--ink);
   background:
@@ -178,6 +181,7 @@ button:focus-visible {
   position: relative;
   z-index: 1;
   align-self: center;
+  justify-self: end;
 }
 
 .portrait-frame {
@@ -232,10 +236,13 @@ button:focus-visible {
   display: flex;
   flex-wrap: nowrap;
   align-items: baseline;
+  justify-content: flex-start;
   gap: 0.18em 0.32em;
   max-width: none;
   font-size: clamp(1.85rem, 2.72vw, 2.15rem);
   line-height: 1.08;
+  text-align: left;
+  text-align-last: left;
   white-space: nowrap;
 }
 
@@ -253,6 +260,15 @@ button:focus-visible {
   color: var(--ink) !important;
   font-size: 1em;
   font-weight: 850;
+}
+
+.pronouns {
+  color: var(--muted);
+  font-size: 0.38em;
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .hero-line {
@@ -365,16 +381,26 @@ button:focus-visible {
 
 .intro-grid {
   display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
-  gap: 48px;
+  grid-template-columns: minmax(260px, 320px) minmax(0, 760px);
+  grid-template-areas:
+    "intro-kicker intro-copy"
+    "intro-topics intro-copy";
+  justify-content: center;
+  gap: 18px 56px;
   padding-top: 54px;
-  padding-bottom: 42px;
+  padding-bottom: 48px;
   border-bottom: 1px solid var(--line);
 }
 
 .intro-grid > .section-kicker,
 .question-lab > .section-kicker {
   margin-bottom: 0;
+}
+
+.intro-grid > .section-kicker {
+  grid-area: intro-kicker;
+  font-size: 1rem;
+  white-space: nowrap;
 }
 
 .home-map {
@@ -448,7 +474,6 @@ button:focus-visible {
 }
 
 .intro-copy h2,
-.band-copy h2,
 .callout-panel h2 {
   margin: 0 0 18px;
   max-width: 760px;
@@ -458,7 +483,6 @@ button:focus-visible {
 }
 
 .intro-copy p,
-.band-copy p,
 .callout-panel p,
 .page-hero p,
 .hobby-copy p {
@@ -467,11 +491,30 @@ button:focus-visible {
   font-size: 1.05rem;
 }
 
+.intro-copy p {
+  hyphens: auto;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.intro-copy {
+  grid-area: intro-copy;
+}
+
+.intro-copy p:first-child {
+  margin-top: 0;
+}
+
+.intro-copy p:last-child {
+  margin-bottom: 0;
+}
+
 .intro-topics {
+  grid-area: intro-topics;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 10px;
-  margin-top: 28px;
+  margin-top: 0;
 }
 
 .intro-topics a {
@@ -577,61 +620,6 @@ button:focus-visible {
   color: var(--muted);
 }
 
-.feature-band {
-  width: 100%;
-  max-width: none;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
-  gap: 40px;
-  align-items: stretch;
-  padding: 96px max(28px, calc((100vw - 1180px) / 2));
-  color: var(--paper-strong);
-  background: var(--ink);
-}
-
-.feature-band .section-kicker {
-  color: var(--accent);
-}
-
-.feature-band p {
-  color: rgba(255, 250, 241, 0.72);
-}
-
-.mini-list {
-  display: grid;
-  border: 1px solid rgba(255, 250, 241, 0.22);
-  border-radius: 8px;
-}
-
-.mini-list a {
-  display: grid;
-  gap: 6px;
-  min-height: 94px;
-  padding: 20px;
-  border-bottom: 1px solid rgba(255, 250, 241, 0.18);
-  transition:
-    background 180ms ease,
-    color 180ms ease;
-}
-
-.mini-list a:last-child {
-  border-bottom: 0;
-}
-
-.mini-list a:hover {
-  color: var(--ink);
-  background: var(--accent);
-}
-
-.mini-list span {
-  font-weight: 850;
-}
-
-.mini-list small {
-  color: inherit;
-  opacity: 0.72;
-}
-
 .split-callout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -639,8 +627,27 @@ button:focus-visible {
 }
 
 .callout-panel {
-  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
   padding: 26px;
+}
+
+.callout-panel .section-kicker {
+  margin-bottom: 24px;
+  font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+  line-height: 1.1;
+}
+
+.callout-panel > p:not(.section-kicker) {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.callout-panel > .text-link {
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 .callout-panel.accent {
@@ -1082,12 +1089,15 @@ button:focus-visible {
   box-shadow: 14px 14px 0 rgba(63, 111, 240, 0.12);
 }
 
-.contact-sheet h1 {
+.contact-heading {
   max-width: 760px;
-  margin: 0 0 40px;
-  font-size: clamp(2.6rem, 8vw, 6.2rem);
-  line-height: 0.95;
+  margin: 0 0 34px;
+  color: var(--accent);
+  font-size: clamp(1.65rem, 2vw, 1.95rem);
+  line-height: 1.1;
   letter-spacing: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .contact-line {
@@ -1111,6 +1121,13 @@ button:focus-visible {
   gap: 12px;
 }
 
+.contact-links {
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
 .contact-line a {
   min-height: 44px;
   display: inline-flex;
@@ -1132,6 +1149,33 @@ button:focus-visible {
   color: var(--accent-ink);
   border-color: var(--accent);
   background: var(--accent);
+}
+
+.contact-line .icon-link {
+  min-height: 84px;
+  justify-content: center;
+  padding: 0;
+}
+
+.icon-link svg {
+  width: 30px;
+  height: 30px;
+  overflow: visible;
+}
+
+.icon-link path,
+.icon-link rect,
+.icon-link circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-link svg path:first-child:last-child {
+  fill: currentColor;
+  stroke: none;
 }
 
 .site-footer {
@@ -1170,6 +1214,19 @@ button:focus-visible {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 1180px) {
+  .hero-content h1.name-lockup {
+    flex-wrap: wrap;
+    max-width: 640px;
+    white-space: normal;
+  }
+
+  .pronouns {
+    flex-basis: 100%;
+    margin-top: 6px;
+  }
 }
 
 @media (max-width: 980px) {
@@ -1219,9 +1276,17 @@ button:focus-visible {
     min-height: 64px;
     display: flex;
     align-items: center;
+    border-top: 0;
+    border-right: 0;
     border-bottom: 1px solid rgba(255, 250, 241, 0.18);
+    border-left: 0;
+    border-radius: 0;
     background: var(--ink);
     font-size: 1.5rem;
+  }
+
+  .site-nav a:hover {
+    transform: none;
   }
 
   .home-hero {
@@ -1235,6 +1300,7 @@ button:focus-visible {
     order: -1;
     width: min(100%, 330px);
     margin: 0 auto;
+    justify-self: center;
   }
 
   .portrait-frame {
@@ -1255,6 +1321,9 @@ button:focus-visible {
   .hero-content h1.name-lockup {
     flex-wrap: wrap;
     font-size: clamp(1.78rem, 6.6vw, 2.18rem);
+    justify-content: flex-start;
+    text-align: left;
+    text-align-last: left;
     white-space: normal;
   }
 
@@ -1266,8 +1335,12 @@ button:focus-visible {
     margin-top: 34px;
   }
 
+  .pronouns {
+    flex-basis: 100%;
+    margin-top: 6px;
+  }
+
   .intro-grid,
-  .feature-band,
   .split-callout,
   .page-hero,
   .hobby-hero {
@@ -1280,8 +1353,16 @@ button:focus-visible {
   }
 
   .intro-grid {
+    grid-template-areas:
+      "intro-kicker"
+      "intro-copy"
+      "intro-topics";
     padding-top: 30px;
     padding-bottom: 22px;
+  }
+
+  .intro-grid > .section-kicker {
+    white-space: normal;
   }
 
   .pillars {
@@ -1293,7 +1374,6 @@ button:focus-visible {
   }
 
   .intro-copy h2,
-  .band-copy h2,
   .callout-panel h2 {
     font-size: 2.2rem;
   }
@@ -1322,10 +1402,6 @@ button:focus-visible {
 
   .note-grid {
     padding-top: 36px;
-  }
-
-  .feature-band {
-    padding: 56px 20px;
   }
 
   .page-hero {
@@ -1379,9 +1455,15 @@ button:focus-visible {
   }
 
   .latin-name,
-  .han-inline {
+  .han-inline,
+  .pronouns {
     display: block;
     overflow-wrap: anywhere;
+  }
+
+  .pronouns {
+    margin-top: 8px;
+    font-size: 0.34em;
   }
 
   .name-divider {
