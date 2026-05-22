@@ -8,7 +8,7 @@
       content="Research and project work by Chuanbo (Pilgrim) Peng."
     />
     <title>Work | Chuanbo (Pilgrim) Peng</title>
-    <link rel="stylesheet" href="styles.css?v=20260519-cursorfix" />
+    <link rel="stylesheet" href="styles.css?v=20260522-home-bandit-trim" />
   </head>
   <body data-page="work">
     <header class="site-header">
@@ -29,91 +29,62 @@
     <main id="main">
       <section class="page-hero work-hero">
         <div class="page-hero-copy reveal">
-          <p class="eyebrow">Research & Projects</p>
-          <h1>Questions first. Projects as evidence.</h1>
+          <h1 class="work-title">Research & Projects</h1>
           <p>
-            This page is not trying to pretend every thread is a finished result. It is a map of
-            the questions I am learning to ask, and the projects that give those questions weight.
+            Bandits, hydropeaking data, differential equations, control, and forecasting.
           </p>
         </div>
-        <div class="page-hero-mark research-panel reveal" aria-hidden="true">
-          <div>
-            <span class="panel-label">Logged feedback</span>
-            <strong>biased / sparse / sequential</strong>
-          </div>
-          <div>
-            <span class="panel-label">Evaluation lens</span>
-            <strong>IPS + confidence + ESS</strong>
-          </div>
-          <div>
-            <span class="panel-label">Decision layer</span>
-            <strong>bandits -> LLM policies</strong>
-          </div>
-        </div>
-      </section>
-
-      <section class="section question-lab" aria-label="Research questions">
-        <div class="section-kicker">Research direction</div>
-        <article class="question-card reveal">
-          <span>01</span>
-          <h2>When does offline evidence fail to rank bandit policies?</h2>
-          <p>
-            IPS and confidence intervals can be useful diagnostics, but I now treat this more as
-            an exploratory question than a settled result.
-          </p>
-        </article>
-        <article class="question-card reveal">
-          <span>02</span>
-          <h2>Do LLMs explore, or do we just shrink their action space?</h2>
-          <p>
-            My current SUSTech preparation is circling this distinction: genuine exploration vs a
-            pipeline that makes the choice easier by generating candidates first.
-          </p>
-        </article>
-        <article class="question-card reveal">
-          <span>03</span>
-          <h2>How do we make experiments trustworthy when systems are adaptive?</h2>
-          <p>
-            This is where statistics, numerical reliability, and evaluation protocols meet: not
-            only asking whether a model works, but whether the measurement is believable.
-          </p>
-        </article>
       </section>
 
       <section class="section work-list">
         <article class="work-card reveal" id="offline-evaluation">
           <div class="work-meta">
-            <span>Guided research-style project</span>
-            <span>Jul 2025 - Sep 2025</span>
+            <span>Offline bandit evaluation</span>
+            <span>IPS vs regret</span>
           </div>
-          <h2>IPS vs Regret in Offline Bandit Evaluation</h2>
+          <div class="work-heading">
+            <h2>IPS vs Regret in Offline Bandit Evaluation</h2>
+            <span class="work-date">07/2025 - 09/2025</span>
+          </div>
           <p>
-            I used this project to test a cautious question: how far inverse propensity scoring
-            can go as an offline proxy for cumulative regret when evaluating bandit algorithms.
-            The work compared Explore-Then-Commit, UCB, and Thompson Sampling on Yelp and
-            MovieLens-style logs, using confidence intervals, ranking consistency, and effective
-            sample size diagnostics. I would present it as useful training in offline evaluation
-            rather than as a strong research claim.
+            Inverse propensity scoring is tested as an offline proxy for cumulative regret in
+            logged bandit data. The comparison uses Explore-Then-Commit, UCB, and Thompson
+            Sampling on Yelp and MovieLens-style logs, with regret curves, IPS estimates,
+            bootstrap confidence intervals, effective sample size, and agreement tests between
+            online and offline rankings.
+          </p>
+          <p>
+            IPS is useful as an offline proxy, but it does not reliably replace regret.
+            Confidence intervals often overlap, short-horizon and small-dataset rankings can
+            disagree, and ESS helps explain reliability without removing the underlying metric
+            gap.
           </p>
           <div class="tag-row">
             <span>Bandits</span>
-            <span>IPS</span>
+            <span>Offline policy evaluation</span>
             <span>Cumulative regret</span>
             <span>ESS</span>
-            <span>Yelp / MovieLens</span>
+            <span>Yelp</span>
+            <span>MovieLens</span>
           </div>
+          <a class="text-link work-note-link" href="bandit-offline-evaluation.html"
+            >Read technical note -&gt;</a
+          >
         </article>
 
         <article class="work-card reveal" id="llm-exploration">
           <div class="work-meta">
-            <span>SUSTech preparation</span>
-            <span>Current</span>
+            <span>LLM decision-making</span>
+            <span>Exploration / evaluation</span>
           </div>
-          <h2>LLM Exploration / Exploitation and In-Context RL</h2>
+          <div class="work-heading">
+            <h2>LLM Exploration / Exploitation and In-Context RL</h2>
+            <span class="work-date">Ongoing</span>
+          </div>
           <p>
-            I am preparing a summer research project on LLMs as in-context bandit or reinforcement
-            learners, with attention to exploration, exploitation, action-space reduction, offline
-            data bias, and evaluation protocols.
+            LLMs can be studied as in-context bandit or reinforcement-learning systems, with
+            attention to exploration, exploitation, action-space reduction, offline data bias, and
+            evaluation protocols.
           </p>
           <p class="quote-line">
             Does decomposing LLM decision-making into candidate generation and final selection
@@ -130,61 +101,100 @@
 
         <article class="work-card reveal" id="hydropeaking">
           <div class="work-meta">
-            <span>Research Assistant</span>
-            <span>Jun 2024 - Sep 2024</span>
+            <span>Hydrological time series</span>
+            <span>Daily Hydropeaking Index</span>
           </div>
-          <h2>Hydropeaking Analysis / Daily Hydropeaking Index</h2>
+          <div class="work-heading">
+            <h2>Hydropeaking Data Cleaning and Daily Hydropeaking Index Definition</h2>
+            <span class="work-date">06/2024 - 09/2024</span>
+          </div>
           <p>
-            I built algorithms to compute the Daily Hydropeaking Index, processed national
-            hydrological datasets from 2021 to 2023, and explored statistical and machine learning
-            approaches for modelling hydropeaking behaviour.
+            Hydropeaking describes rapid flow fluctuations associated with hydropower operation.
+            Hydrological and water-quality records are cleaned and aligned, station and dam fields
+            are checked, and a Daily Hydropeaking Index is defined from weekly hydropeaking ideas.
+          </p>
+          <p>
+            The index work turns messy monitoring tables into standardized time-series records
+            and converts a literature-based periodicity idea into a computable daily metric.
           </p>
           <div class="tag-row">
-            <span>Hydrological data</span>
+            <span>Hydropeaking</span>
+            <span>DHI</span>
             <span>Time series</span>
             <span>Data processing</span>
-            <span>Regression / LSTM</span>
+            <span>Water quality</span>
+            <span>Metric definition</span>
           </div>
         </article>
 
         <article class="work-card reveal" id="thermostat">
           <div class="work-meta">
-            <span>Applied mathematics</span>
-            <span>MGP modelling</span>
+            <span>Control and optimization</span>
           </div>
-          <h2>Applied Math Modelling: Pendulum Rides and Thermostat Control</h2>
+          <div class="work-heading">
+            <h2>Pendulum Ride Excitement and Thermostat Control</h2>
+            <span class="work-date work-date-stack">
+              <span>Pendulum: 10/2025 - 01/2026</span>
+              <span>Thermostat: 01/2026 - 04/2026</span>
+            </span>
+          </div>
           <p>
-            Two MGP modelling tasks sit behind this applied-math thread. In one, we modelled
-            pendulum-type amusement rides, defining an excitement function from acceleration,
-            jerk, and height under safety constraints. In another, we studied room heating with
-            Newton cooling, heat-equation simulations, bang-bang and hysteresis control, and
-            optimization of thermostat placement.
+            Pendulum-ride modelling combines normalized acceleration, jerk, and height into an
+            excitement function under safety constraints. Thermostat-control modelling moves from
+            0D Newton cooling to 1D and 2D heat-equation simulations, with an objective function
+            for thermostat-location optimization and comparisons between bang-bang and hysteresis
+            control.
           </p>
           <div class="tag-row">
-            <span>ODE/PDE modelling</span>
             <span>Numerical methods</span>
             <span>Control</span>
+            <span>Heat equation</span>
             <span>Optimization</span>
           </div>
         </article>
 
         <article class="work-card reveal" id="modelling">
           <div class="work-meta">
-            <span>Competitions</span>
-            <span>Team lead</span>
+            <span>Forecasting / classification</span>
+            <span>Optimization</span>
           </div>
-          <h2>Mathematical Modeling Competitions</h2>
+          <div class="work-heading">
+            <h2>Forecasting, Classification, and Optimization Models</h2>
+            <span class="work-date">2023</span>
+          </div>
           <p>
-            I led teams in mathematical modelling competitions, including work on tennis momentum
-            prediction and e-commerce demand forecasting. These projects strengthened my workflow
-            for problem decomposition, data processing, model selection, visualization, and
-            technical writing.
+            Tennis momentum modelling uses logistic regression, SVM, random forests, PCA, and
+            sensitivity analysis. E-commerce demand forecasting uses ARIMA/SARIMA, nonlinear
+            regression, K-means, and cosine similarity. Vegetable replenishment and pricing uses
+            time-series analysis, nonlinear regression, grey prediction, and profit optimization.
           </p>
           <div class="tag-row">
             <span>Forecasting</span>
             <span>Classification</span>
+            <span>Clustering</span>
             <span>Optimization</span>
-            <span>Report writing</span>
+          </div>
+        </article>
+
+        <article class="work-card reveal" id="foundations">
+          <div class="work-meta">
+            <span>Differential equations</span>
+            <span>Numerical visualisation</span>
+          </div>
+          <div class="work-heading">
+            <h2>Differential Equations and Numerical Visualisation</h2>
+            <span class="work-date">11/2024 - 01/2025</span>
+          </div>
+          <p>
+            Hypergeometric equations are handled through Frobenius series and reduction of order.
+            Damped string vibration is studied through series solutions and Python visualisation
+            of the damped wave equation.
+          </p>
+          <div class="tag-row">
+            <span>ODEs</span>
+            <span>Special functions</span>
+            <span>Damped wave equation</span>
+            <span>Python visualisation</span>
           </div>
         </article>
       </section>

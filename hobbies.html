@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Hobbies and personal side of Chuanbo (Pilgrim) Peng." />
-    <title>Hobbies | Chuanbo (Pilgrim) Peng</title>
-    <link rel="stylesheet" href="styles.css?v=20260519-cursorfix" />
+    <meta name="description" content="Albums and moments Chuanbo (Pilgrim) Peng keeps returning to." />
+    <title>Beyond the CV | Chuanbo (Pilgrim) Peng</title>
+    <link rel="stylesheet" href="styles.css?v=20260522-moments" />
   </head>
   <body data-page="hobbies">
     <header class="site-header">
@@ -24,102 +24,155 @@
     </header>
 
     <main id="main">
-      <section class="hobby-hero">
-        <img
-          src="assets/images/profile-hobbies.jpg"
-          alt="Casual selfie of Chuanbo Peng at home"
-          width="1200"
-          height="1600"
-        />
-        <div class="hobby-copy reveal">
-          <p class="eyebrow">Beyond the CV</p>
-          <h1>Music, video, and a less formal signal.</h1>
-          <p>
-            Outside research and coursework, I keep space for sound, edits, everyday observations,
-            and the internet corners that make life less flat.
-          </p>
-          <a
-            class="button primary"
-            href="https://space.bilibili.com/484920117?spm_id_from=333.1007.0.0"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit Bilibili
-          </a>
+      <section class="section album-hero">
+        <p class="eyebrow">Beyond the CV</p>
+        <h1>Albums I Keep Returning To</h1>
+      </section>
+
+      <section class="section album-grid" id="album-grid" aria-label="Favourite albums"></section>
+
+      <section class="section moments-section" aria-labelledby="moments-title">
+        <div class="moments-heading">
+          <p class="eyebrow">Moments</p>
+          <h2 id="moments-title">Scenes I Keep In Frame</h2>
+        </div>
+
+        <div class="moments-grid">
+          <article class="moment-card moment-wide">
+            <button class="moment-image-button" type="button" data-full="assets/images/moments/wollaton-sunrise.jpg" data-download="wollaton-sunrise.jpg">
+              <img src="assets/images/moments/wollaton-sunrise.jpg" alt="Sunrise over Wollaton Park lake in Nottingham" loading="lazy" />
+            </button>
+            <div>
+              <h3>Wollaton Park Lake</h3>
+              <p>Nottingham · Feb 2025</p>
+            </div>
+          </article>
+
+          <article class="moment-card moment-wide">
+            <button class="moment-image-button" type="button" data-full="assets/images/moments/skegness-sunrise.jpg" data-download="skegness-sunrise.jpg">
+              <img src="assets/images/moments/skegness-sunrise.jpg" alt="Sunrise over the Skegness coast" loading="lazy" />
+            </button>
+            <div>
+              <h3>Skegness Sunrise</h3>
+              <p>Skegness · Mar 2025</p>
+            </div>
+          </article>
+
+          <article class="moment-card moment-wide">
+            <button class="moment-image-button" type="button" data-full="assets/images/moments/worlds-2024-final.jpg" data-download="worlds-2024-final.jpg">
+              <img src="assets/images/moments/worlds-2024-final.jpg" alt="BLG and T1 players on stage at the League of Legends Worlds 2024 final" loading="lazy" />
+            </button>
+            <div>
+              <h3>Worlds 2024 Final</h3>
+              <p>London · Nov 2024</p>
+            </div>
+          </article>
+
+          <article class="moment-card">
+            <button class="moment-image-button" type="button" data-full="assets/images/moments/tia-ray-shenzhen-2024.jpg" data-download="tia-ray-shenzhen-2024.jpg">
+              <img src="assets/images/moments/tia-ray-shenzhen-2024.jpg" alt="Tia Ray concert lightstick in Shenzhen" loading="lazy" />
+            </button>
+            <div>
+              <h3>Tia Ray Live</h3>
+              <p>Shenzhen · Jul 2024</p>
+            </div>
+          </article>
+
+          <article class="moment-card">
+            <button class="moment-image-button" type="button" data-full="assets/images/moments/iceland-december-2025.jpg" data-download="iceland-december-2025.jpg">
+              <img src="assets/images/moments/iceland-december-2025.jpg" alt="Ocean framed by dark rocks in Iceland" loading="lazy" />
+            </button>
+            <div>
+              <h3>Iceland Coast</h3>
+              <p>Iceland · Dec 2025</p>
+            </div>
+          </article>
+
+          <article class="moment-card moment-wide">
+            <button class="moment-image-button" type="button" data-full="assets/images/moments/shan-yichun-chengdu-2025.png" data-download="shan-yichun-chengdu-2025.png">
+              <img src="assets/images/moments/shan-yichun-chengdu-2025.png" alt="Shan Yichun performing on stage in Chengdu" loading="lazy" />
+            </button>
+            <div>
+              <h3>单依纯成都演唱会</h3>
+              <p>Chengdu · Jan 4 2025</p>
+            </div>
+          </article>
+
+          <article class="moment-card moment-wide">
+            <button class="moment-image-button" type="button" data-full="assets/images/moments/moment-zhuyu-first-live-2025.jpg" data-download="moment-zhuyu-first-live-2025.jpg">
+              <img src="assets/images/moments/moment-zhuyu-first-live-2025.jpg" alt="Handwritten stage screen from Shan Yichun's Shanghai concert" loading="lazy" />
+            </button>
+            <div>
+              <h3>珠玉首唱</h3>
+              <p>Shanghai · Apr 20 2025</p>
+            </div>
+          </article>
+
+          <article class="moment-card moment-wide">
+            <button class="moment-image-button" type="button" data-full="assets/images/moments/moment-guangbo-first-live-2026.jpg" data-download="moment-guangbo-first-live-2026.jpg">
+              <img src="assets/images/moments/moment-guangbo-first-live-2026.jpg" alt="Shan Yichun performing Guangbo in Shenzhen" loading="lazy" />
+            </button>
+            <div>
+              <h3>光波首唱</h3>
+              <p>Shenzhen · Mar 28 2026</p>
+            </div>
+          </article>
+
+          <article class="moment-card moment-wide">
+            <button class="moment-image-button" type="button" data-full="assets/images/moments/moment-mona-lisa-paris-2026.jpg" data-download="moment-mona-lisa-paris-2026.jpg">
+              <img src="assets/images/moments/moment-mona-lisa-paris-2026.jpg" alt="Crowd photographing the Mona Lisa at the Louvre" loading="lazy" />
+            </button>
+            <div>
+              <h3>Mona Lisa Crowd</h3>
+              <p>Paris · Jan 2026</p>
+            </div>
+          </article>
+
+          <article class="moment-card">
+            <button class="moment-image-button" type="button" data-full="assets/images/moments/norway-december-2025.jpg" data-download="norway-december-2025.jpg">
+              <img src="assets/images/moments/norway-december-2025.jpg" alt="Northern lights over a street in Norway" loading="lazy" />
+            </button>
+            <div>
+              <h3>Northern Lights</h3>
+              <p>Norway · Dec 2025</p>
+            </div>
+          </article>
+
+          <article class="moment-card moment-wide">
+            <button class="moment-image-button" type="button" data-full="assets/images/moments/valorant-diamond-2026.png" data-download="valorant-diamond-2026.png">
+              <img src="assets/images/moments/valorant-diamond-2026.png" alt="Valorant Diamond rank screen" loading="lazy" />
+            </button>
+            <div>
+              <h3>瓦洛兰特钻石</h3>
+              <p>May 11 2026</p>
+            </div>
+          </article>
         </div>
       </section>
-
-      <section class="section hobby-board" aria-label="Creative interests">
-        <article class="hobby-feature reveal">
-          <p class="section-kicker">Bilibili</p>
-          <h2>A more relaxed public corner.</h2>
-          <p>
-            I use Bilibili as a lighter space for interests and fragments. For v1, the site links
-            to the profile rather than embedding videos before specific pieces are selected.
-          </p>
-          <a
-            class="text-link"
-            href="https://space.bilibili.com/484920117?spm_id_from=333.1007.0.0"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit Bilibili ->
-          </a>
-        </article>
-        <article class="sound-card reveal" aria-label="Music visual">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <strong>Music</strong>
-          <small>attention, mood, rhythm</small>
-        </article>
-        <article class="video-card reveal">
-          <div></div>
-          <div></div>
-          <div></div>
-          <strong>Video creation</strong>
-          <small>clips, edits, future experiments</small>
-        </article>
-      </section>
-
-      <section class="section hobby-grid">
-        <article class="hobby-card reveal">
-          <span class="card-index">01</span>
-          <h2>Music</h2>
-          <p>Music is one of the places where my attention can stop being purely analytical.</p>
-        </article>
-        <article class="hobby-card reveal">
-          <span class="card-index">02</span>
-          <h2>Video Creation</h2>
-          <p>
-            I want this part of the site to leave room for Bilibili, edits, fragments, and future
-            creative experiments.
-          </p>
-        </article>
-        <article class="hobby-card reveal">
-          <span class="card-index">03</span>
-          <h2>Life Tags</h2>
-          <p>
-            Games and fitness stay as light life tags for now: present, but not carrying the page.
-          </p>
-        </article>
-      </section>
     </main>
+
+    <div class="moment-lightbox" id="moment-lightbox" hidden>
+      <button class="moment-lightbox-backdrop" type="button" aria-label="Close image preview"></button>
+      <figure class="moment-lightbox-panel" aria-live="polite">
+        <button class="moment-lightbox-close" type="button" aria-label="Close image preview">&times;</button>
+        <img src="" alt="" />
+        <figcaption>
+          <span></span>
+          <a href="" download>Download</a>
+        </figcaption>
+      </figure>
+    </div>
 
     <footer class="site-footer">
       <p>Chuanbo (Pilgrim) Peng</p>
       <div>
-        <a
-          href="https://space.bilibili.com/484920117?spm_id_from=333.1007.0.0"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Bilibili</a
-        >
-        <a href="mailto:pilgrimpeng@gmail.com">pilgrimpeng@gmail.com</a>
+        <a href="contact.html">Contact</a>
       </div>
     </footer>
 
+    <script src="album-data.js?v=20260522-qq-links2"></script>
+    <script src="albums-index.js?v=20260522-qq-links2"></script>
+    <script src="moments.js?v=20260522-lightbox"></script>
     <script src="script.js?v=20260519-cursorfix"></script>
   </body>
 </html>

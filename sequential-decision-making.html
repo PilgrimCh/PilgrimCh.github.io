@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Sequential decision-making branch page for Chuanbo (Pilgrim) Peng."
+    />
+    <title>Sequential Decision-Making | Chuanbo (Pilgrim) Peng</title>
+    <link rel="stylesheet" href="styles.css?v=20260521-shortintro" />
+  </head>
+  <body data-page="work">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Chuanbo Peng home"><span>CP</span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="work.html" data-nav="work">Research & Projects</a>
+        <a href="notes.html" data-nav="notes">Learning Notes</a>
+        <a href="hobbies.html" data-nav="hobbies">Beyond the CV</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="page-hero branch-hero">
+        <div class="page-hero-copy reveal">
+          <p class="eyebrow">Branch 02</p>
+          <h1>Sequential decision-making under partial feedback.</h1>
+          <p>
+            This branch follows bandits, exploration, exploitation, regret, and offline evaluation:
+            situations where learning and acting are tangled together.
+          </p>
+        </div>
+        <div class="page-hero-mark branch-mark reveal" aria-hidden="true">
+          <span>bandits</span>
+          <span>logged feedback</span>
+          <span>policy evaluation</span>
+        </div>
+      </section>
+
+      <section class="section branch-overview">
+        <div class="section-kicker">Core question</div>
+        <div class="branch-copy reveal">
+          <h2>How can a system learn when it only observes feedback from actions it chose?</h2>
+          <p>
+            I am drawn to this area because the evaluation problem is already part of the decision
+            problem. Logged data is biased by past choices, exploration has a cost, and a policy
+            can look good for reasons that disappear online.
+          </p>
+        </div>
+      </section>
+
+      <section class="section branch-grid" aria-label="Sequential decision-making notes">
+        <article class="branch-card reveal">
+          <span>Question</span>
+          <h2>Can offline metrics rank online behaviour?</h2>
+          <p>
+            IPS, confidence intervals, and effective sample size can help, but the harder question
+            is when they fail to preserve the ordering we care about.
+          </p>
+        </article>
+        <article class="branch-card reveal">
+          <span>Method lens</span>
+          <h2>Exploration has to be measured.</h2>
+          <p>
+            I care about the difference between genuine exploration and systems that only appear
+            adaptive because the possible action set has already been narrowed.
+          </p>
+        </article>
+        <article class="branch-card reveal">
+          <span>Related work</span>
+          <h2>Bandits as a bridge.</h2>
+          <p>
+            My offline bandit evaluation project and current LLM exploration preparation both use
+            bandits as a language for studying adaptive choice.
+          </p>
+        </article>
+      </section>
+
+      <section class="section branch-links" aria-label="Related projects">
+        <a href="work.html#offline-evaluation">IPS vs Regret</a>
+        <a href="work.html#llm-exploration">LLM Exploration / Exploitation</a>
+        <a href="work.html">Back to Research & Projects</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Chuanbo (Pilgrim) Peng</p>
+      <div>
+        <a href="mailto:cpeng37@jh.edu">cpeng37@jh.edu</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+
+    <script src="script.js?v=20260519-cursorfix"></script>
+  </body>
+</html>
