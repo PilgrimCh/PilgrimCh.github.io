@@ -825,6 +825,17 @@ button:focus-visible {
 .work-note-link {
   grid-column: 1 / -1;
   justify-self: start;
+  transition:
+    transform 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+.work-note-link:hover,
+.work-note-link:focus-visible {
+  transform: translateY(-2px);
+  color: var(--accent-ink);
+  border-color: var(--accent);
 }
 
 .quote-line {
