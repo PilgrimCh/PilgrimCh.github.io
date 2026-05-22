@@ -639,6 +639,32 @@ button:focus-visible {
   border-bottom: 2px solid currentColor;
 }
 
+body[data-page="home"] .text-link {
+  justify-self: start;
+  padding: 0 8px;
+  border-radius: 8px;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+body[data-page="home"] .text-link:hover,
+body[data-page="home"] .text-link:focus-visible {
+  transform: translateY(-2px);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+body[data-page="home"] .callout-panel.accent .text-link:hover,
+body[data-page="home"] .callout-panel.accent .text-link:focus-visible {
+  color: var(--ink);
+  border-color: var(--paper-strong);
+  background: var(--paper-strong);
+}
+
 .page-hero {
   min-height: min(690px, calc(100svh - 20px));
   display: grid;
