@@ -26,7 +26,7 @@ if (album && detail) {
         <h1>${album.title}</h1>
         <p class="album-artist">
           <span>${album.artist}</span>
-          ${album.artistTagline ? `<span class="album-artist-tagline">“${album.artistTagline}”</span>` : ""}
+          ${album.artistTagline ? `<span class="album-artist-tagline">${album.artistTagline}</span>` : ""}
         </p>
         <div class="album-description">${renderDescription(album.description)}</div>
         <div class="album-platforms album-detail-platforms" aria-label="${album.title} platform links">

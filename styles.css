@@ -1828,6 +1828,15 @@ body[data-page="home"] .callout-panel.accent .text-link:focus-visible {
   font-weight: 800;
   font-style: italic;
   text-align: right;
+  white-space: nowrap;
+}
+
+.album-artist-tagline::before {
+  content: "“";
+}
+
+.album-artist-tagline::after {
+  content: "”";
 }
 
 .album-detail-copy > p:not(.eyebrow):not(.album-artist),
