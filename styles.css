@@ -1854,6 +1854,27 @@ body[data-page="home"] .callout-panel.accent .text-link:focus-visible {
   margin-bottom: 0;
 }
 
+.album-description {
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.album-description.is-switching {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+.album-translate-button {
+  margin-top: 1.35rem;
+}
+
+.album-translate-button[aria-pressed="true"] {
+  color: var(--accent-ink);
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
 .album-detail-platforms {
   grid-row: auto;
   grid-column: auto;
