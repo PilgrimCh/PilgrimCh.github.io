@@ -1,3 +1,10 @@
+const momentsSection = document.querySelector(".moments-section");
+const albumHero = document.querySelector(".album-hero");
+
+if (momentsSection && albumHero) {
+  albumHero.before(momentsSection);
+}
+
 const momentLightbox = document.querySelector("#moment-lightbox");
 const momentLightboxImage = momentLightbox?.querySelector("img");
 const momentLightboxCaption = momentLightbox?.querySelector("figcaption span");

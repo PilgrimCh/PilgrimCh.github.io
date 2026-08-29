@@ -1433,7 +1433,7 @@ body[data-page="home"] .callout-panel.accent .text-link:focus-visible {
   padding-bottom: 6px;
 }
 
-.album-hero h1 {
+.album-hero h2 {
   max-width: none;
   margin: 0;
   font-size: clamp(2.2rem, 3.4vw, 3.2rem);
@@ -1574,7 +1574,7 @@ body[data-page="home"] .callout-panel.accent .text-link:focus-visible {
   margin-bottom: 22px;
 }
 
-.moments-heading h2 {
+.moments-heading h1 {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3.15rem);
   line-height: 1;
@@ -1584,6 +1584,7 @@ body[data-page="home"] .callout-panel.accent .text-link:focus-visible {
 .moments-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-flow: dense;
   gap: 18px;
 }
 
@@ -2285,7 +2286,7 @@ body[data-page="home"] .callout-panel.accent .text-link:focus-visible {
     padding-bottom: 4px;
   }
 
-  .album-hero h1 {
+  .album-hero h2 {
     font-size: clamp(2rem, 4vw, 2.25rem);
     white-space: nowrap;
   }
@@ -2449,7 +2450,7 @@ body[data-page="home"] .callout-panel.accent .text-link:focus-visible {
     text-align-last: left;
   }
 
-  .album-hero h1 {
+  .album-hero h2 {
     font-size: 2.12rem;
     white-space: normal;
   }
@@ -2462,7 +2463,7 @@ body[data-page="home"] .callout-panel.accent .text-link:focus-visible {
     padding-top: 44px;
   }
 
-  .moments-heading h2 {
+  .moments-heading h1 {
     font-size: 2rem;
   }
 

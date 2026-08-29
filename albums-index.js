@@ -1,7 +1,13 @@
 const albumGrid = document.querySelector("#album-grid");
+const featuredAlbumIds = ["chun-mei-mei", "eternal-sunshine", "moon-insomnia"];
 
 if (albumGrid && window.albumData) {
-  albumGrid.innerHTML = window.albumData
+  const albumsById = new Map(window.albumData.map((album) => [album.id, album]));
+  const featuredAlbums = featuredAlbumIds
+    .map((albumId) => albumsById.get(albumId))
+    .filter(Boolean);
+
+  albumGrid.innerHTML = featuredAlbums
     .map(
       (album) => `
         <article class="album-card reveal">
