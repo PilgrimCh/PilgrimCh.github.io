@@ -57,32 +57,34 @@
       <section class="section branch-grid" aria-label="AI evaluation notes">
         <article class="branch-card reveal">
           <span>Question</span>
-          <h2>Is performance or action-space reduction doing the work?</h2>
+          <h2>When should an agent trust retrieved experience?</h2>
           <p>
-            If a pipeline first generates a small candidate set and then chooses, I want to know
-            whether the model learned a better policy or inherited an easier problem.
+            External memory can help, do nothing, or cause negative transfer. The evaluation task
+            is to identify when reuse adds value and when the system should abstain or intervene.
           </p>
         </article>
         <article class="branch-card reveal">
           <span>Method lens</span>
-          <h2>Evaluation should expose the mechanism.</h2>
+          <h2>Evaluation should expose the controller.</h2>
           <p>
-            Useful experiments should separate retrieval, candidate generation, selection,
-            exploration, and feedback rather than compressing everything into one score.
+            Useful experiments should separate retrieval, initial memory choice, runtime
+            monitoring, suppression, and replanning rather than compressing everything into one
+            score.
           </p>
         </article>
         <article class="branch-card reveal">
           <span>Related work</span>
-          <h2>LLMs meet sequential decisions.</h2>
+          <h2>Selective reuse under uncertainty.</h2>
           <p>
-            My current preparation connects LLM decision-making with in-context RL, bandits,
-            offline bias, and evaluation protocols for adaptive systems.
+            My SUSTech research uses paired policy comparisons to study when retrieved cases help
+            or harm an LLM agent. Current evidence is limited to a controlled local mechanism;
+            realistic benchmark validation remains open.
           </p>
         </article>
       </section>
 
       <section class="section branch-links" aria-label="Related projects">
-        <a href="work.html#llm-exploration">LLM Exploration / Exploitation</a>
+        <a href="work.html#llm-exploration">Adaptive Memory Control</a>
         <a href="work.html#offline-evaluation">Offline Bandit Evaluation</a>
         <a href="work.html">Back to Research & Projects</a>
       </section>
