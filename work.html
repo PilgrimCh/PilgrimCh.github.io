@@ -30,13 +30,43 @@
         <div class="page-hero-copy reveal">
           <h1 class="work-title">Research & Projects</h1>
           <p>
-            Bandits, uncertainty, adaptive memory in LLM agents, applied data analysis, and
+            Adaptive memory in LLM agents, bandits, uncertainty, applied data analysis, and
             mathematical modelling.
           </p>
         </div>
       </section>
 
       <section class="section work-list">
+        <article class="work-card reveal" id="llm-exploration">
+          <div class="work-meta">
+            <span>SUSTech supervised research</span>
+            <span>Selective memory reuse</span>
+          </div>
+          <div class="work-heading">
+            <h2>Evaluating Selective Memory Reuse in LLM Agents</h2>
+            <span class="work-date">05/26-08/26</span>
+          </div>
+          <p>
+            Under Prof. Fang Kong's supervision at SUSTech, I studied when retrieved experience
+            helps or harms LLM agents. I compared memory-use and no-memory policies on AppWorld and
+            ScienceWorld, using paired evaluation, repeated runs, and uncertainty analysis to test
+            selective reuse, abstention, and runtime replanning.
+          </p>
+          <p>
+            Memory helped in some settings, and adaptive recovery worked in controlled tests. But
+            the selective policies did not consistently outperform strong fixed baselines on
+            independent tasks. Remote follow-up concluded in September 2026.
+          </p>
+          <div class="tag-row">
+            <span>LLM agents</span>
+            <span>External memory</span>
+            <span>Paired evaluation</span>
+            <span>Abstention</span>
+            <span>Runtime replanning</span>
+          </div>
+          <a class="text-link work-note-link" href="https://github.com/PilgrimCh/selective-memory-evaluation" target="_blank" rel="noopener noreferrer">View public project -&gt;</a>
+        </article>
+
         <article class="work-card reveal" id="offline-evaluation">
           <div class="work-meta">
             <span>Offline bandit evaluation</span>
@@ -70,35 +100,6 @@
           <a class="text-link work-note-link" href="bandit-offline-evaluation.html"
             >Read technical note -&gt;</a
           >
-        </article>
-
-        <article class="work-card reveal" id="llm-exploration">
-          <div class="work-meta">
-            <span>SUSTech summer research</span>
-            <span>Selective memory reuse</span>
-          </div>
-          <div class="work-heading">
-            <h2>Risk-Aware Adaptive Memory Control for LLM Agents</h2>
-            <span class="work-date">Spring–Summer 2026</span>
-          </div>
-          <p>
-            Under Prof. Fang Kong's supervision at SUSTech, I investigated when retrieved
-            experience helps or harms LLM agents. The project studies selective external-memory
-            reuse through abstention, runtime monitoring, and memory suppression or replanning.
-          </p>
-          <p>
-            Paired policy comparisons separate retrieval, initial memory choice, and runtime
-            intervention. Clean structured-signal tests support a narrow procedural mechanism for
-            adaptive suppression; noisy-signal confirmation was inconclusive, and realistic
-            benchmark validation remains open.
-          </p>
-          <div class="tag-row">
-            <span>LLM agents</span>
-            <span>External memory</span>
-            <span>Abstention</span>
-            <span>Runtime monitoring</span>
-            <span>Paired evaluation</span>
-          </div>
         </article>
 
         <article class="work-card reveal" id="hydropeaking">
