@@ -1232,6 +1232,45 @@ body[data-page="home"] .callout-panel.accent .text-link:focus-visible {
   padding: 12px 14px;
 }
 
+.memory-page .project-hero h1 {
+  max-width: 900px;
+  white-space: normal;
+}
+
+.memory-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.memory-evidence-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper-strong);
+}
+
+.memory-evidence-card > span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.memory-evidence-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  line-height: 1.17;
+}
+
+.memory-evidence-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .notes-hero {
   background: linear-gradient(90deg, rgba(63, 111, 240, 0.12), rgba(110, 134, 166, 0.16));
 }
@@ -2425,6 +2464,10 @@ body[data-page="home"] .callout-panel.accent .text-link:focus-visible {
 
   .bandit-page .project-card {
     min-height: auto;
+  }
+
+  .memory-evidence-grid {
+    grid-template-columns: 1fr;
   }
 
   .bandit-page .metric-strip {
